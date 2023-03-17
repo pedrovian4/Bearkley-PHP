@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  server_1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    command:
+      - php
+      - -S
+      - 0.0.0.0:5000
+  server_2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 6000:6000
+    command:
+      - php
+      - -S
+      - 0.0.0.0:6000
+  server_3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 7000:7000
+    command:
+      - php
+      - -S
+      - 0.0.0.0:7000
+  server_4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    command:
+      - php
+      - -S
+      - 0.0.0.0:8000
