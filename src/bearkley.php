@@ -41,20 +41,20 @@ function httpPost($url, $data)
 
 
 // Envia ajuste de horario pro master
- httpPost("http://localhost:5000/src/index.php",[
+ httpPost("http://localhost:5000/src/index.php/setTime",[
     "hour"=>intval($server_master_resp), 
     "minute"=> $server_master_resp - intval($server_master_resp)
  ]);
 
 //Server 2 
- httpPost("http://localhost:7000/src/index.php",[
+ httpPost("http://localhost:7000/src/index.php/setTime",[
     "hour"=>intval($server_1_resp), 
     "minute"=> $server_1_resp - intval($server_1_resp)
  ]);
 
 
 // Server 3
- httpPost("http://localhost:8000/src/index.php",[
+ httpPost("http://localhost:8000/src/index.php/setTime",[
     "hour"=>intval($server_2_resp), 
     "minute"=> $server_2_resp - intval($server_2_resp)
  ]);
